@@ -27,7 +27,7 @@ namespace FSNScan
             }
             foreach (string fsn in FSNs)
             {
-                Console.Write(string.Format("Processing - {0}", fsn));
+                Console.Write(string.Format("Processing {1}/{2} - {0}", fsn, FSNs.IndexOf(fsn)+1, FSNs.Count));
 
                 try
                 {
@@ -52,7 +52,6 @@ namespace FSNScan
                 }
                 
                 Console.WriteLine("");
-                System.Threading.Thread.Sleep(1000);
             }
 
             Console.ReadKey();
